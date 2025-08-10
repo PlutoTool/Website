@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlutoTool - Fast, lightweight desktop tools for daily productivity</title>
+    <meta name="description" content="PlutoTool provides fast, lightweight desktop tools designed to enhance your daily productivity. Explore our collection of efficient software solutions.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="site-title">PlutoTool</h1>
+            <p class="tagline">Fast, lightweight desktop tools for daily productivity.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects-section">
+            <h2>Our Projects</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search projects..." class="search-input">
+                <button onclick="searchProjects()" class="btn btn-primary search-btn">Search</button>
+                <button onclick="clearSearch()" class="btn btn-secondary clear-btn" style="display: none;">Clear</button>
+            </div>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <h3>TaskManager Pro</h3>
+                    <p>A lightweight task management application that helps you organize your daily workflow with intuitive drag-and-drop functionality, priority settings, and deadline tracking.</p>
+                    <a href="project-a/" class="btn btn-primary">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>ClipboardSync</h3>
+                    <p>Synchronize your clipboard across multiple devices seamlessly. Copy on one device, paste on another with cloud-based synchronization and history management.</p>
+                    <a href="project-b/" class="btn btn-primary">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>SystemOptimizer</h3>
+                    <p>Optimize your system performance with this comprehensive utility that cleans temporary files, manages startup programs, and monitors system resources in real-time.</p>
+                    <a href="project-c/" class="btn btn-primary">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>SecureNotes</h3>
+                    <p>Keep your notes secure with end-to-end encryption. Features include rich text editing, folder organization, search functionality, and secure cloud backup.</p>
+                    <a href="project-d/" class="btn btn-primary">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>FileOrganizer</h3>
+                    <p>Automatically organize your files based on customizable rules. Sort downloads, documents, and media files into proper folders with smart categorization.</p>
+                    <a href="project-e/" class="btn btn-primary">View Project</a>
+                </article>
+
+                <article class="project-card">
+                    <h3>ScreenCapture+</h3>
+                    <p>Advanced screenshot and screen recording tool with annotation features, multiple output formats, and instant sharing capabilities for enhanced productivity.</p>
+                    <a href="project-f/" class="btn btn-primary">View Project</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 PlutoTool. All rights reserved.</p>
+            <nav class="social-links">
+                <a href="https://github.com/plutotool" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/plutotool" target="_blank" rel="noopener">Twitter</a>
+                <a href="mailto:contact@plutotool.com">Contact</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        function searchProjects() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const projectCards = document.querySelectorAll('.project-card');
+            const clearBtn = document.querySelector('.clear-btn');
+            let hasResults = false;
+
+            projectCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || description.includes(searchTerm)) {
+                    card.style.display = 'flex';
+                    hasResults = true;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            if (searchTerm.length > 0) {
+                clearBtn.style.display = 'inline-block';
+                
+                if (!hasResults) {
+                    showNoResults();
+                } else {
+                    hideNoResults();
+                }
+            }
+        }
+
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            const projectCards = document.querySelectorAll('.project-card');
+            const clearBtn = document.querySelector('.clear-btn');
+            
+            projectCards.forEach(card => {
+                card.style.display = 'flex';
+            });
+            
+            clearBtn.style.display = 'none';
+            hideNoResults();
+        }
+
+        function showNoResults() {
+            hideNoResults(); // Remove existing message first
+            const projectsGrid = document.querySelector('.projects-grid');
+            const noResultsDiv = document.createElement('div');
+            noResultsDiv.className = 'no-results';
+            noResultsDiv.innerHTML = `
+                <div style="text-align: center; padding: 3rem; color: #666;">
+                    <h3>No projects found</h3>
+                    <p>Try adjusting your search terms or browse all projects above.</p>
+                </div>
+            `;
+            projectsGrid.appendChild(noResultsDiv);
+        }
+
+        function hideNoResults() {
+            const noResults = document.querySelector('.no-results');
+            if (noResults) {
+                noResults.remove();
+            }
+        }
+
+        // Add Enter key support for search input
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchProjects();
+            }
+        });
+
+        // Real-time search as user types (optional)
+        document.getElementById('searchInput').addEventListener('input', function() {
+            if (this.value.length === 0) {
+                clearSearch();
+            } else {
+                searchProjects();
+            }
+        });
+    </script>
+</body>
+</html>
