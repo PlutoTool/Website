@@ -7,19 +7,11 @@
     <meta name="description" content="PlutoTool provides fast, lightweight desktop tools designed to enhance your daily productivity. Explore our collection of efficient software solutions.">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="assets/images/PlutoTodo.ico">
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <a href="#" style="display: flex; align-items: center; text-decoration: none; color: inherit;">
-                <img src="assets/images/PlutoTool.png" alt="PlutoTool Logo" style="width: 96px; height: 96px; margin-right: 12px; border-radius: 50%;">
-                <div>
-                    <h1 class="site-title" style="margin: 0;">PlutoTool</h1>
-                    <p class="tagline" style="margin: 0;">Fast, lightweight desktop tools for daily productivity.</p>
-                </div>
-            </a>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
 
     <main>
         <section class="projects-section">
@@ -32,9 +24,13 @@
             <div class="projects-grid">
                 <article class="project-card">
                     <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                        <img src="assets/images/PlutoTodo.png" alt="Pluto: To-do Icon" style="width: 64px; height: 64px; border-radius: 12px; flex-shrink: 0;">
+                        <a href="project/plutoTodo/index.html" style="display: block; text-decoration: none;">
+                            <img src="assets/images/PlutoTodo.png" alt="Pluto: To-do Icon" style="width: 64px; height: 64px; border-radius: 12px; flex-shrink: 0;">
+                        </a>
                         <div>
-                            <h3 style="margin: 0 0 0.5rem 0;">Pluto: To-do</h3>
+                            <a href="project/plutoTodo/index.html" style="text-decoration: none; color: inherit;">
+                                <h3 style="margin: 0 0 0.5rem 0;">Pluto: To-do</h3>
+                            </a>
                             <p style="margin: 0; color: #666; font-size: 0.9rem; font-style: italic;">Organize your universe with this powerful, cross-platform task manager.</p>
                         </div>
                     </div>
@@ -45,17 +41,13 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-content">
-            <p>&copy; 2025 PlutoTool. All rights reserved.</p>
-            <nav class="social-links">
-                <a href="https://github.com/PlutoTool" target="_blank" rel="noopener">GitHub</a>
-                <a href="mailto:cuong.dinhduynd@gmail.com">Contact</a>
-            </nav>
-        </div>
-    </footer>
+    <div id="footer-placeholder"></div>
 
     <script>
+        // Load components
+        loadHeader(true); // true for home page
+        loadFooter();
+
         function searchProjects() {
             const searchTerm = document.getElementById('searchInput').value.toLowerCase();
             const projectCards = document.querySelectorAll('.project-card');

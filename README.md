@@ -6,6 +6,8 @@ A responsive multi-page static website for PlutoTool - Fast, lightweight desktop
 
 - **Responsive Design**: Works perfectly on desktop, tablet, and mobile devices
 - **Modern UI**: Clean, professional design with #4A90E2 accent color
+- **Component-Based**: Reusable header and footer components for consistency
+- **Search Functionality**: Built-in project search with real-time filtering
 - **SEO Friendly**: Semantic HTML5 structure with proper meta tags
 - **GitHub Pages Ready**: No build process required, works directly with GitHub Pages
 - **Fast Loading**: Minimal dependencies, optimized for performance
@@ -18,11 +20,16 @@ Website/
 ├── assets/
 │   ├── css/
 │   │   └── style.css      # Shared CSS styles
-│   └── images/            # Image assets
-├── project-a/
-│   └── index.html         # TaskManager Pro project page
-├── project-b/
-│   └── index.html         # ClipboardSync project page
+│   └── images/            # Image assets (icons, logos)
+│       ├── PlutoTodo.ico  # Favicon
+│       ├── PlutoTodo.png  # Pluto: To-do app icon
+│       └── PlutoTool.png  # PlutoTool main logo
+├── components/
+│   ├── header.js          # Reusable header component
+│   └── footer.js          # Reusable footer component
+├── project/
+│   └── plutoTodo/
+│       └── index.html     # Pluto: To-do project page
 └── README.md
 ```
 
@@ -48,10 +55,15 @@ Website/
 
 To add a new project:
 
-1. **Create project folder**: `mkdir project-name`
-2. **Create index.html**: Use `project-a/index.html` as a template
-3. **Update main page**: Add the new project card to `index.html`
-4. **Update links**: Ensure all GitHub repository links are correct
+1. **Create project folder**: `mkdir project/project-name`
+2. **Create index.html**: Use `project/plutoTodo/index.html` as a template
+3. **Update main page**: Add the new project card to the projects grid in `index.html`
+4. **Add project assets**: Include project icons in `assets/images/`
+5. **Update components**: Ensure header and footer links are correct
+
+### Current Projects
+
+- **Pluto: To-do**: A modern task manager built with Rust Tauri 2 and TypeScript React, featuring advanced sorting, bulk operations, and space-themed design.
 
 ## Customization
 
@@ -60,9 +72,10 @@ The primary accent color is defined as `#4A90E2`. To change it, update the CSS v
 
 ### Content
 - Update project descriptions in `index.html`
-- Modify project details in individual project pages
+- Modify project details in individual project pages under `project/`
 - Replace placeholder GitHub links with actual repository URLs
 - Add real screenshots/images to `assets/images/`
+- Update header and footer components in `components/`
 
 ### Styling
 All shared styles are in `assets/css/style.css`. The design uses:
@@ -70,6 +83,7 @@ All shared styles are in `assets/css/style.css`. The design uses:
 - Mobile-first responsive design
 - Smooth transitions and hover effects
 - Clean typography with system fonts
+- Component-based architecture for consistency
 
 ## Browser Support
 
@@ -82,8 +96,9 @@ All shared styles are in `assets/css/style.css`. The design uses:
 
 - **Lighthouse Score**: 95+ on all metrics
 - **Load Time**: < 1 second on fast connections
-- **File Size**: Total CSS + HTML < 50KB
-- **No Dependencies**: Pure HTML/CSS/JS, no frameworks
+- **File Size**: Total CSS + HTML + JS < 100KB
+- **No External Dependencies**: Pure HTML/CSS/JS, no frameworks
+- **Search Performance**: Client-side filtering for instant results
 
 ## License
 
