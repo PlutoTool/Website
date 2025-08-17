@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pluto: To-do - PlutoTool</title>
-    <meta name="description" content="Pluto: To-do - A modern, elegant, and feature-rich cross-platform todo application built with Rust Tauri 2 and TypeScript React.">
+    <meta name="description" content="Pluto: To-do v1.1.0 - A modern, elegant, and feature-rich cross-platform todo application with automatic updates, enhanced subtask system, and bulk operations. Built with Rust Tauri 2 and TypeScript React.">
     <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="icon" type="image/x-icon" href="../../assets/images/PlutoTodo.ico">
     <script src="../../components/header.js"></script>
@@ -24,6 +24,35 @@
                     <p style="margin: 0; font-size: 1.2rem; color: #666; font-weight: 300;">Organize your universe, one task at a time 🌌</p>
                 </div>
             </div>
+            
+            <!-- Quick Action Buttons -->
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0; justify-content: center;">
+                <a href="https://github.com/PlutoTool/PlutoToDo/releases/latest" target="_blank" rel="noopener" 
+                   style="background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(37, 99, 235, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(37, 99, 235, 0.3)'">
+                    <span>📥</span> Download Latest Version
+                </a>
+                <a href="https://github.com/PlutoTool/PlutoToDo" target="_blank" rel="noopener"
+                   style="background: linear-gradient(135deg, #374151 0%, #1f2937 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(55, 65, 81, 0.3);"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(55, 65, 81, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(55, 65, 81, 0.3)'">
+                    <span>💻</span> View Source Code
+                </a>
+                <a href="https://github.com/PlutoTool/PlutoToDo/releases" target="_blank" rel="noopener"
+                   style="background: linear-gradient(135deg, #7c3aed 0%, #6d28d9 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(124, 58, 237, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(124, 58, 237, 0.3)'">
+                    <span>📋</span> All Releases
+                </a>
+                <a href="https://github.com/PlutoTool/PlutoToDo/wiki" target="_blank" rel="noopener"
+                   style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);"
+                   onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 8px 20px rgba(5, 150, 105, 0.4)'"
+                   onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 12px rgba(5, 150, 105, 0.3)'">
+                    <span>📚</span> Documentation
+                </a>
+            </div>
+            
             <img src="../assets/images/pluto-todo-hero.jpg" alt="Pluto: To-do Screenshot" class="project-image" 
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
             <div style="display:none; background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; padding: 4rem; border-radius: 12px; margin: 2rem 0;">
@@ -40,50 +69,88 @@
                 <p>Whether you're organizing personal projects, managing work tasks, or coordinating team activities, Pluto: To-do provides a seamless experience with advanced features like bulk operations, smart sorting, and space-themed design that makes task management enjoyable.</p>
 
                 <div style="background: linear-gradient(135deg, #1e3a8a 0%, #581c87 100%); padding: 1.5rem; border-radius: 8px; margin: 2rem 0; color: white;">
-                    <h4 style="margin: 0 0 0.5rem 0; color: #fbbf24;">🆕 Latest Version 1.0.0</h4>
+                    <h4 style="margin: 0 0 0.5rem 0; color: #fbbf24;">🆕 Latest Version 1.1.0</h4>
                     <ul style="margin: 0.5rem 0 0 0; list-style: none; padding: 0;">
-                        <li>✨ Advanced sorting system with multiple fields</li>
-                        <li>🔄 Bulk operations for managing multiple tasks</li>
-                        <li>📊 Enhanced UI components and visual feedback</li>
-                        <li>ℹ️ New About section with PlutoTool information</li>
-                        <li>⚡ Performance optimizations and faster rendering</li>
+                        <li>🔄 <strong>Automatic Update Checker</strong> - Check for new releases directly from the sidebar</li>
+                        <li>ℹ️ <strong>About Section</strong> - New About modal with PlutoTool information and website link</li>
+                        <li>✨ <strong>Advanced Sorting System</strong> - Sort tasks by multiple fields with ascending/descending options</li>
+                        <li>🔄 <strong>Bulk Operations</strong> - Select and manage multiple tasks simultaneously</li>
+                        <li>🌳 <strong>Enhanced Subtask System</strong> - Hierarchical task management with progress tracking</li>
+                        <li>📊 <strong>Task Progress Indicators</strong> - Visual progress bars for parent tasks</li>
+                        <li>🎯 <strong>Smart Task Completion</strong> - Intelligent completion handling for tasks with subtasks</li>
+                        <li>📱 <strong>Responsive Bulk Actions</strong> - Mobile-optimized floating action buttons</li>
+                        <li>⚡ <strong>Performance Optimizations</strong> - Faster task rendering and state management</li>
                     </ul>
                 </div>
 
-                <h3>🎯 Core Features</h3>
+                <h3>🎯 Core Task Management</h3>
                 <ul class="features-list">
-                    <li><strong>Complete Task Management</strong> - Create, edit, delete tasks with intuitive interface</li>
-                    <li><strong>Subtasks Support</strong> - Organize complex tasks with 2-level nested subtasks</li>
-                    <li><strong>Priority System</strong> - High, Medium, Low priority with color coding</li>
-                    <li><strong>Due Date Tracking</strong> - Calendar picker with overdue indicators</li>
-                    <li><strong>Rich Descriptions</strong> - Markdown support for detailed task descriptions</li>
-                    <li><strong>Categories & Tags</strong> - Flexible organization with custom categories and tags</li>
-                    <li><strong>Advanced Search</strong> - Full-text search across titles, descriptions, and tags</li>
-                    <li><strong>Smart Filtering</strong> - Filter by status, priority, dates, categories, and tags</li>
-                    <li><strong>Bulk Operations</strong> - Select and manage multiple tasks simultaneously</li>
-                    <li><strong>Flexible Sorting</strong> - Sort by multiple fields with ascending/descending options</li>
+                    <li><strong>Complete CRUD Operations</strong> - Create, edit, delete tasks with intuitive interface and visual feedback</li>
+                    <li><strong>Enhanced Subtask System</strong> - Hierarchical task management with expandable tree view (2 levels deep)</li>
+                    <li><strong>Task Progress Tracking</strong> - Visual progress bars showing subtask completion percentages</li>
+                    <li><strong>Smart Task Completion</strong> - Intelligent handling when completing tasks with incomplete subtasks</li>
+                    <li><strong>Priority Levels</strong> - High, Medium, Low priority with color coding and visual indicators</li>
+                    <li><strong>Due Date Management</strong> - Calendar picker with overdue indicators and smart reminders</li>
+                    <li><strong>Rich Descriptions</strong> - Detailed task descriptions with markdown support</li>
+                    <li><strong>Advanced Bulk Operations</strong> - Select multiple tasks for bulk delete, completion, or updates</li>
+                </ul>
+
+                <h3>🗂️ Organization Features</h3>
+                <ul class="features-list">
+                    <li><strong>Categories/Lists</strong> - Custom categories with color coding (Work, Personal, Shopping, Health, etc.)</li>
+                    <li><strong>Flexible Tags System</strong> - Cross-category organization and filtering with tag management</li>
+                    <li><strong>Smart Search</strong> - Full-text search across titles, descriptions, and tags with instant results</li>
+                    <li><strong>Advanced Filtering</strong> - Filter by completion status, priority level, due date ranges, category, and tags</li>
+                    <li><strong>Flexible Sorting</strong> - Sort by name, due date, creation date, update date, priority, or completion status</li>
+                    <li><strong>Sort Direction Toggle</strong> - Ascending/descending sorting with visual indicators</li>
                 </ul>
 
                 <h3>🎨 User Experience</h3>
                 <ul class="features-list">
                     <li><strong>Space-themed Design</strong> - Cosmic color palette with deep blues and purples</li>
-                    <li><strong>Dark Mode Support</strong> - Automatic system preference detection</li>
-                    <li><strong>About Modal</strong> - Easy access to PlutoTool information and website</li>
+                    <li><strong>Dark Mode Support</strong> - Automatic system preference detection with manual toggle</li>
+                    <li><strong>Update Notifications</strong> - Automatic update checking with detailed release notes and one-click downloads</li>
+                    <li><strong>About Modal</strong> - Accessible information about the app and PlutoTool with direct website link</li>
                     <li><strong>Responsive Design</strong> - Optimized for desktop, tablet, and mobile</li>
-                    <li><strong>Smooth Animations</strong> - Micro-interactions for better user experience</li>
+                    <li><strong>Mobile-Optimized Bulk Actions</strong> - Floating action buttons for desktop, bottom sheets for mobile</li>
+                    <li><strong>Expandable Task Hierarchy</strong> - Collapsible tree view with visual depth indicators</li>
+                    <li><strong>Subtask Completion Modal</strong> - Smart dialog for handling incomplete subtasks</li>
+                    <li><strong>Real-time Progress Indicators</strong> - Live updating progress bars for parent tasks</li>
+                    <li><strong>Smooth Animations</strong> - Micro-interactions and transitions for better UX</li>
                     <li><strong>Keyboard Shortcuts</strong> - Power user features for efficient navigation</li>
                 </ul>
 
-                <h3>⚡ Technical Excellence</h3>
+                <h3>⚡ Performance & Technical</h3>
                 <ul class="features-list">
-                    <li><strong>Cross-Platform</strong> - Windows, macOS, Linux with native installers</li>
-                    <li><strong>Rust Backend</strong> - Tauri 2.x for performance and security</li>
-                    <li><strong>React Frontend</strong> - TypeScript React with modern tooling</li>
-                    <li><strong>SQLite Database</strong> - Fast, secure, offline-first storage</li>
-                    <li><strong>Memory Efficient</strong> - Less than 100MB idle memory usage</li>
-                    <li><strong>Fast Startup</strong> - Application launches in under 2 seconds</li>
-                    <li><strong>Real-time Updates</strong> - Instant UI updates with optimistic loading</li>
+                    <li><strong>Cross-Platform</strong> - Windows, macOS, Linux support with native installers</li>
+                    <li><strong>Local SQLite Database</strong> - Fast, secure, offline-first storage with automatic migrations</li>
+                    <li><strong>Real-time Updates</strong> - Instant UI updates with optimistic loading and state management</li>
+                    <li><strong>Memory Efficient</strong> - Less than 100MB idle memory usage with optimized Rust backend</li>
+                    <li><strong>Fast Startup</strong> - Less than 2 seconds application launch with lazy loading</li>
+                    <li><strong>Batch Operations</strong> - Efficient bulk operations for improved performance</li>
+                    <li><strong>Smart Caching</strong> - Intelligent data caching for faster user interactions</li>
                 </ul>
+
+                <h3>🔄 Update System</h3>
+                <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <h4 style="margin: 0 0 1rem 0; color: #1e40af;">How Updates Work</h4>
+                    <ul class="features-list" style="margin: 0;">
+                        <li><strong>Automatic Checking</strong> - Checks for updates on app startup with 1-hour caching</li>
+                        <li><strong>GitHub Integration</strong> - Fetches releases from GitHub repository automatically</li>
+                        <li><strong>Smart Notifications</strong> - Shows update button in sidebar when new version is available</li>
+                        <li><strong>Version Comparison</strong> - Uses semantic versioning to compare current vs. latest releases</li>
+                        <li><strong>Release Notes</strong> - Displays detailed changelog and new features in update modal</li>
+                        <li><strong>One-Click Downloads</strong> - Direct link to GitHub releases for easy updates</li>
+                    </ul>
+                    
+                    <h4 style="margin: 1.5rem 0 0.5rem 0; color: #1e40af;">Update Process</h4>
+                    <ol style="margin: 0; padding-left: 1.5rem;">
+                        <li>Click "Check for Updates" in the sidebar or wait for automatic check</li>
+                        <li>If update available, click the highlighted update button to see release notes</li>
+                        <li>Click "Download Update" to visit the GitHub releases page</li>
+                        <li>Download and install the appropriate installer for your platform</li>
+                    </ol>
+                </div>
 
                 <h3>System Requirements</h3>
                 <ul class="features-list">
@@ -115,7 +182,83 @@
                 <li><strong>Create</strong> your first task and explore the features</li>
             </ol>
             
-            <p>For developers who want to build from source or contribute:</p>
+            <h3>🏗️ Architecture & Technology Stack</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="margin: 0 0 1rem 0; color: #991b1b;">🦀 Backend (Rust)</h4>
+                    <ul style="margin: 0; font-size: 0.9rem;">
+                        <li><strong>Framework:</strong> Tauri 2.x (latest stable)</li>
+                        <li><strong>Database:</strong> SQLite with rusqlite crate</li>
+                        <li><strong>Serialization:</strong> serde & serde_json</li>
+                        <li><strong>Date/Time:</strong> chrono for timestamps</li>
+                        <li><strong>Async Runtime:</strong> tokio for non-blocking ops</li>
+                        <li><strong>Error Handling:</strong> thiserror for structured errors</li>
+                    </ul>
+                </div>
+                <div style="background: #eff6ff; border: 1px solid #93c5fd; padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="margin: 0 0 1rem 0; color: #1e3a8a;">⚛️ Frontend (TypeScript)</h4>
+                    <ul style="margin: 0; font-size: 0.9rem;">
+                        <li><strong>Framework:</strong> React 18+ with TypeScript 5.8+</li>
+                        <li><strong>Build Tool:</strong> Vite 7+ for fast development</li>
+                        <li><strong>Styling:</strong> Tailwind CSS with dark mode</li>
+                        <li><strong>State Management:</strong> Zustand for performance</li>
+                        <li><strong>UI Components:</strong> Custom with Radix UI primitives</li>
+                        <li><strong>Icons:</strong> Lucide React icon library</li>
+                        <li><strong>Date Utils:</strong> date-fns for manipulation</li>
+                        <li><strong>Forms:</strong> React Hook Form with Zod validation</li>
+                        <li><strong>Animations:</strong> React Spring for micro-interactions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>💾 Database Schema</h3>
+            <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h4 style="margin: 0 0 0.5rem 0; color: #4338ca;">categories</h4>
+                        <ul style="margin: 0; font-size: 0.85rem; font-family: 'Monaco', 'Menlo', monospace;">
+                            <li>id (TEXT, PRIMARY KEY)</li>
+                            <li>name (TEXT, NOT NULL)</li>
+                            <li>color (TEXT, NOT NULL)</li>
+                            <li>icon (TEXT)</li>
+                            <li>created_at (DATETIME)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0 0 0.5rem 0; color: #059669;">tasks</h4>
+                        <ul style="margin: 0; font-size: 0.85rem; font-family: 'Monaco', 'Menlo', monospace;">
+                            <li>id (TEXT, PRIMARY KEY)</li>
+                            <li>title (TEXT, NOT NULL)</li>
+                            <li>description (TEXT)</li>
+                            <li>completed (BOOLEAN)</li>
+                            <li>priority (TEXT)</li>
+                            <li>due_date (DATETIME)</li>
+                            <li>category_id (TEXT)</li>
+                            <li>parent_id (TEXT) - For subtasks</li>
+                            <li>created_at (DATETIME)</li>
+                            <li>updated_at (DATETIME)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin: 0 0 0.5rem 0; color: #dc2626;">task_tags</h4>
+                        <ul style="margin: 0; font-size: 0.85rem; font-family: 'Monaco', 'Menlo', monospace;">
+                            <li>task_id (TEXT)</li>
+                            <li>tag (TEXT, NOT NULL)</li>
+                            <li>PRIMARY KEY (task_id, tag)</li>
+                        </ul>
+                        <h4 style="margin: 1rem 0 0.5rem 0; color: #b45309;">task_progress (Virtual)</h4>
+                        <ul style="margin: 0; font-size: 0.85rem; font-family: 'Monaco', 'Menlo', monospace;">
+                            <li>progress_percentage (REAL)</li>
+                            <li>total_subtasks (INTEGER)</li>
+                            <li>completed_subtasks (INTEGER)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3>👩‍💻 Development Setup</h3>
+            <p><strong>Prerequisites:</strong> Node.js (v18+), Rust (latest stable), and platform-specific build tools.</p>
+            
             <div style="background: #1f2937; padding: 1rem; border-radius: 6px; margin: 1rem 0; font-family: 'Monaco', 'Menlo', monospace; font-size: 0.9rem; color: #e5e7eb;">
                 <div style="color: #10b981;"># Clone the repository</div>
                 <div>git clone https://github.com/PlutoTool/PlutoToDo.git</div>
@@ -124,51 +267,224 @@
                 <div>npm install --legacy-peer-deps</div>
                 <div style="color: #10b981; margin-top: 1rem;"># Start development server</div>
                 <div>npm run tauri dev</div>
+                <div style="color: #10b981; margin-top: 1rem;"># Build for production</div>
+                <div>npm run tauri build</div>
+            </div>
+
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin: 0 0 1rem 0; color: #166534;">🛠️ Available Scripts</h4>
+                <ul style="margin: 0; font-size: 0.9rem;">
+                    <li><code style="background: #dcfce7; padding: 0.2rem 0.4rem; border-radius: 3px;">npm run dev</code> - Start Vite development server (frontend only)</li>
+                    <li><code style="background: #dcfce7; padding: 0.2rem 0.4rem; border-radius: 3px;">npm run tauri dev</code> - Start full app development with hot reload</li>
+                    <li><code style="background: #dcfce7; padding: 0.2rem 0.4rem; border-radius: 3px;">npm run tauri build</code> - Build application with installers</li>
+                    <li><code style="background: #dcfce7; padding: 0.2rem 0.4rem; border-radius: 3px;">npm run build</code> - Build frontend for production</li>
+                </ul>
+            </div>
+
+            <h3>🎨 Design System</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                <div style="background: #2563eb; color: white; padding: 1rem; border-radius: 6px; text-align: center;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">Primary Blue</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">#2563eb</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">Main actions & focus</div>
+                </div>
+                <div style="background: #7c3aed; color: white; padding: 1rem; border-radius: 6px; text-align: center;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">Cosmic Purple</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">#7c3aed</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">Accent colors</div>
+                </div>
+                <div style="background: #10b981; color: white; padding: 1rem; border-radius: 6px; text-align: center;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">Success Green</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">#10b981</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">Completed tasks</div>
+                </div>
+                <div style="background: #f59e0b; color: white; padding: 1rem; border-radius: 6px; text-align: center;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">Warning Orange</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">#f59e0b</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">Medium priority</div>
+                </div>
+                <div style="background: #ef4444; color: white; padding: 1rem; border-radius: 6px; text-align: center;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">Danger Red</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">#ef4444</div>
+                    <div style="font-size: 0.8rem; opacity: 0.9;">High priority</div>
+                </div>
             </div>
 
             <h3>⌨️ Keyboard Shortcuts</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
                 <div>
                     <h4 style="color: #2563eb; margin: 0 0 0.5rem 0;">Navigation</h4>
                     <ul style="margin: 0; font-size: 0.9rem;">
                         <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + N</kbd> - Create new task</li>
                         <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + F</kbd> - Focus search bar</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + ,</kbd> - Open preferences</li>
                         <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Escape</kbd> - Close modals/cancel</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Tab</kbd> - Navigate form fields</li>
                     </ul>
                 </div>
                 <div>
                     <h4 style="color: #7c3aed; margin: 0 0 0.5rem 0;">Task Management</h4>
                     <ul style="margin: 0; font-size: 0.9rem;">
-                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Space</kbd> - Toggle completion</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Space</kbd> - Toggle task completion</li>
                         <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + E</kbd> - Edit selected task</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + D</kbd> - Delete selected task</li>
                         <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + A</kbd> - Select all tasks</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Click Chevron</kbd> - Expand/collapse subtasks</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #059669; margin: 0 0 0.5rem 0;">Sorting & Filtering</h4>
+                    <ul style="margin: 0; font-size: 0.9rem;">
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + 1-6</kbd> - Quick sort by field</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Cmd/Ctrl + R</kbd> - Reverse sort order</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Shift + Click</kbd> - Bulk select range</li>
+                        <li><kbd style="background: #f3f4f6; padding: 0.2rem 0.4rem; border-radius: 3px; font-size: 0.8rem;">Enter</kbd> - Confirm/submit forms</li>
                     </ul>
                 </div>
             </div>
 
+            <h3>🆕 New Features & Enhancements (v1.1.0)</h3>
+            <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 1px solid #0ea5e9; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin: 0 0 1rem 0; color: #0c4a6e;">🌳 Enhanced Subtask System</h4>
+                <ul style="margin: 0 0 1.5rem 0; font-size: 0.9rem;">
+                    <li><strong>SubtaskItem Component</strong> - Hierarchical task display with expandable tree view</li>
+                    <li><strong>Progress Tracking</strong> - Visual progress bars showing completion percentage</li>
+                    <li><strong>Bulk Selection</strong> - Checkbox selection for bulk operations on subtasks</li>
+                    <li><strong>Smart Completion</strong> - SubtaskCompletionModal for handling incomplete subtasks</li>
+                </ul>
+                
+                <h4 style="margin: 0 0 1rem 0; color: #0c4a6e;">📊 Task Progress System</h4>
+                <ul style="margin: 0 0 1.5rem 0; font-size: 0.9rem;">
+                    <li><strong>Progress Calculation</strong> - Real-time calculation of task completion percentages</li>
+                    <li><strong>Hierarchy Management</strong> - Build and manage task relationships efficiently</li>
+                    <li><strong>Visual Indicators</strong> - Live updating progress bars for parent tasks</li>
+                </ul>
+                
+                <h4 style="margin: 0 0 1rem 0; color: #0c4a6e;">🔄 Automatic Update System</h4>
+                <ul style="margin: 0; font-size: 0.9rem;">
+                    <li><strong>GitHub Integration</strong> - Automatic fetching of releases with 1-hour caching</li>
+                    <li><strong>Version Comparison</strong> - Semantic versioning for accurate update detection</li>
+                    <li><strong>Release Notes</strong> - Detailed changelog display in update modal</li>
+                    <li><strong>One-Click Downloads</strong> - Direct links to platform-specific installers</li>
+                </ul>
+            </div>
+
             <h3>🗓️ Roadmap</h3>
-            <div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
-                <h4 style="margin: 0 0 1rem 0; color: #1f2937;">Coming Soon (v1.1.0)</h4>
-                <ul style="margin: 0; columns: 2; column-gap: 2rem;">
-                    <li>📱 Enhanced mobile responsiveness</li>
-                    <li>🔄 Optional cloud synchronization</li>
-                    <li>📋 Reusable task templates</li>
-                    <li>📈 Productivity analytics dashboard</li>
-                    <li>🎨 Custom theme creation</li>
-                    <li>🔗 Calendar integrations</li>
-                    <li>👥 Collaborative features</li>
-                    <li>🌐 Web version with PWA support</li>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                <div style="background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="margin: 0 0 1rem 0; color: #1f2937;">Upcoming Features (v1.2.0)</h4>
+                    <ul style="margin: 0; font-size: 0.9rem;">
+                        <li>📱 Mobile Responsiveness - Enhanced touch interface</li>
+                        <li>🔄 Data Sync - Optional cloud synchronization</li>
+                        <li>📋 Task Templates - Reusable task templates</li>
+                        <li>📈 Analytics Dashboard - Productivity insights</li>
+                        <li>🎨 Theme Customization - Custom color themes</li>
+                        <li>🔍 Advanced Search - Enhanced filtering options</li>
+                    </ul>
+                </div>
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); padding: 1.5rem; border-radius: 8px;">
+                    <h4 style="margin: 0 0 1rem 0; color: #92400e;">Future Enhancements (v1.3.0+)</h4>
+                    <ul style="margin: 0; font-size: 0.9rem;">
+                        <li>🔗 Integrations - Calendar sync (Google, Outlook)</li>
+                        <li>📊 Advanced Reporting - Detailed productivity reports</li>
+                        <li>👥 Collaboration - Shared lists and team management</li>
+                        <li>🔔 Smart Notifications - Context-aware reminders</li>
+                        <li>🌐 Web Version - Browser-based PWA support</li>
+                        <li>📱 Mobile Apps - Native iOS and Android apps</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0; border: 1px solid #6366f1;">
+                <h4 style="margin: 0 0 1rem 0; color: #312e81;">🔮 Long-term Vision</h4>
+                <ul style="margin: 0; columns: 2; column-gap: 2rem; font-size: 0.9rem;">
+                    <li>🤖 AI Integration - Smart task suggestions and auto-categorization</li>
+                    <li>🔌 Plugin System - Third-party extensions and customizations</li>
+                    <li>📦 Backup & Restore - Automated backup solutions</li>
+                    <li>🌍 Internationalization - Multi-language support</li>
+                </ul>
+            </div>
+
+            <h3>🐛 Troubleshooting</h3>
+            <div style="background: #fef9e7; border: 1px solid #f3e8ff; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <h4 style="margin: 0 0 1rem 0; color: #92400e;">Common Issues & Solutions</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div>
+                        <h5 style="margin: 0 0 0.5rem 0; color: #dc2626;">Build Failures</h5>
+                        <ul style="margin: 0; font-size: 0.9rem;">
+                            <li><strong>Issue:</strong> <code style="background: #fee2e2; padding: 0.1rem 0.3rem; border-radius: 2px;">cargo build</code> fails with linker errors</li>
+                            <li><strong>Solution:</strong> Ensure platform-specific build tools are installed</li>
+                            <li><strong>Issue:</strong> npm install fails with peer dependency warnings</li>
+                            <li><strong>Solution:</strong> Use <code style="background: #fee2e2; padding: 0.1rem 0.3rem; border-radius: 2px;">npm install --legacy-peer-deps</code></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 style="margin: 0 0 0.5rem 0; color: #dc2626;">Runtime Issues</h5>
+                        <ul style="margin: 0; font-size: 0.9rem;">
+                            <li><strong>Issue:</strong> Database connection errors</li>
+                            <li><strong>Solution:</strong> Check file permissions and SQLite initialization</li>
+                            <li><strong>Issue:</strong> App window doesn't appear on launch</li>
+                            <li><strong>Solution:</strong> Try <code style="background: #fee2e2; padding: 0.1rem 0.3rem; border-radius: 2px;">npm run tauri dev -- --debug</code></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <h4 style="margin: 1.5rem 0 1rem 0; color: #92400e;">Performance Tips</h4>
+                <ul style="margin: 0; font-size: 0.9rem;">
+                    <li>Close unnecessary applications to free up system resources</li>
+                    <li>Use <code style="background: #fef3c7; padding: 0.1rem 0.3rem; border-radius: 2px;">npm run tauri build</code> for production testing</li>
+                    <li>Monitor memory usage with development tools</li>
+                    <li>Clear application data if experiencing slowdowns</li>
+                </ul>
+            </div>
+
+            <h3>🤝 Contributing</h3>
+            <div style="background: #f0f9ff; border: 1px solid #bfdbfe; padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                <p style="margin: 0 0 1rem 0;">We welcome contributions! Here's how to get started:</p>
+                
+                <h4 style="margin: 0 0 0.5rem 0; color: #1e40af;">Getting Started</h4>
+                <ol style="margin: 0 0 1.5rem 0; padding-left: 1.5rem; font-size: 0.9rem;">
+                    <li><strong>Fork the repository</strong> on GitHub</li>
+                    <li><strong>Clone your fork</strong> locally</li>
+                    <li><strong>Create a feature branch:</strong> <code style="background: #e0f2fe; padding: 0.1rem 0.3rem; border-radius: 2px;">git checkout -b feature/your-feature-name</code></li>
+                    <li><strong>Install dependencies:</strong> <code style="background: #e0f2fe; padding: 0.1rem 0.3rem; border-radius: 2px;">npm install --legacy-peer-deps</code></li>
+                    <li><strong>Start development:</strong> <code style="background: #e0f2fe; padding: 0.1rem 0.3rem; border-radius: 2px;">npm run tauri dev</code></li>
+                </ol>
+                
+                <h4 style="margin: 0 0 0.5rem 0; color: #1e40af;">Development Guidelines</h4>
+                <ul style="margin: 0; font-size: 0.9rem;">
+                    <li>Follow the existing code style and conventions</li>
+                    <li>Add TypeScript types for all new code</li>
+                    <li>Test your changes thoroughly across platforms</li>
+                    <li>Update documentation for new features</li>
+                    <li>Write clear, descriptive commit messages</li>
                 </ul>
             </div>
 
             <h3>Support & Community</h3>
             <p>Join our growing community and get help when you need it:</p>
-            <ul class="features-list">
-                <li><strong>Bug Reports:</strong> <a href="https://github.com/PlutoTool/PlutoToDo/issues" target="_blank" rel="noopener" style="color: #4A90E2;">GitHub Issues</a></li>
-                <li><strong>Feature Requests:</strong> <a href="https://github.com/PlutoTool/PlutoToDo/discussions" target="_blank" rel="noopener" style="color: #4A90E2;">GitHub Discussions</a></li>
-                <li><strong>Documentation:</strong> <a href="https://github.com/PlutoTool/PlutoToDo/wiki" target="_blank" rel="noopener" style="color: #4A90E2;">GitHub Wiki</a></li>
-                <li><strong>Email Support:</strong> <a href="mailto:cuong.dinhduynd@gmail.com" style="color: #4A90E2;">Contact Us</a></li>
-            </ul>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin: 1.5rem 0;">
+                <a href="https://github.com/PlutoTool/PlutoToDo/issues" target="_blank" rel="noopener" 
+                   style="background: #fef2f2; border: 1px solid #fca5a5; padding: 1rem; border-radius: 6px; text-decoration: none; color: #991b1b; display: block; transition: all 0.2s;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">🐛 Bug Reports</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Report issues and bugs on GitHub</div>
+                </a>
+                <a href="https://github.com/PlutoTool/PlutoToDo/discussions" target="_blank" rel="noopener"
+                   style="background: #f0f9ff; border: 1px solid #93c5fd; padding: 1rem; border-radius: 6px; text-decoration: none; color: #1e3a8a; display: block; transition: all 0.2s;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">💡 Feature Requests</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Suggest new features and improvements</div>
+                </a>
+                <a href="https://github.com/PlutoTool/PlutoToDo/wiki" target="_blank" rel="noopener"
+                   style="background: #f0fdf4; border: 1px solid #bbf7d0; padding: 1rem; border-radius: 6px; text-decoration: none; color: #166534; display: block; transition: all 0.2s;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">📚 Documentation</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Comprehensive guides and tutorials</div>
+                </a>
+                <a href="mailto:cuong.dinhduynd@gmail.com"
+                   style="background: #fef3c7; border: 1px solid #fcd34d; padding: 1rem; border-radius: 6px; text-decoration: none; color: #92400e; display: block; transition: all 0.2s;">
+                    <div style="font-weight: 600; margin-bottom: 0.5rem;">📧 Email Support</div>
+                    <div style="font-size: 0.9rem; opacity: 0.8;">Direct contact for urgent issues</div>
+                </a>
+            </div>
 
             <div style="background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: white; padding: 2rem; border-radius: 12px; margin: 2rem 0; text-align: center;">
                 <h4 style="margin: 0 0 1rem 0;">🌟 Part of the PlutoTool Ecosystem</h4>
